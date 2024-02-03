@@ -1,0 +1,19 @@
+[
+  {
+    "nombre": "que calor",
+    "apellido": "hace",
+    "edad": 20
+  },
+  {
+    "nombre": "Tinki",
+    "apellido": "Winki",
+    "edad": 18,
+    "curso": "Backend"
+  },
+  {
+    "nombre": "Tinki",
+    "apellido": "Winki",
+    "edad": 18,
+    "curso": "Backend"
+  }
+]
