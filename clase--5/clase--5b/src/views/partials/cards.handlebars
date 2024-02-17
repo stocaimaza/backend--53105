@@ -1,0 +1,10 @@
+{{!-- Usamos ciclos --}}
+
+{{#each arrayProductos}}
+    <div>
+        <h2>Nombre: {{this.nombre}} </h2>
+        <p>Descripcion: {{this.descripcion}} </p>
+        <p>Precio: {{this.precio}} </p>
+        <button> Comprar </button>
+    </div>
+{{/each}}
