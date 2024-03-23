@@ -48,8 +48,12 @@ import exphbs from "express-handlebars";
 const app = express(); 
 const PUERTO = 8080; 
 import "./database.js";
+import sessionsRouter from "./routes/sessions.router.js";
+import viewsRouter from "./routes/views.router.js";
 
 //Middleware
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 //app.use(cookieParser());
 const miAltaClaveSecreta = "TinkiWinki";
 app.use(cookieParser(miAltaClaveSecreta));
@@ -82,9 +86,11 @@ app.use(session({
 }))
 
 //Rutas
-app.get("/", (req, res) => {
-    res.send("funciona!");
-})
+
+app.use("/api/sessions", sessionsRouter);
+app.use("/", viewsRouter);
+
+
 
 
 
