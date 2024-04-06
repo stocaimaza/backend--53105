@@ -7,6 +7,9 @@ const PUERTO = 8080;
 import "./database.js";
 import sessionsRouter from "./routes/sessions.router.js";
 import viewsRouter from "./routes/views.router.js";
+//Cambios con Passport: 
+import passport from "passport";
+import initializePassport from "./config/passport.config.js";
 
 //Middleware
 app.use(express.json());
@@ -31,6 +34,10 @@ app.use(session({
         mongoUrl:"mongodb+srv://coderhouse53105:coderhouse@cluster0.o9ipohi.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0", ttl: 100
     })
 }))
+//Cambios con Passport: 
+initializePassport();
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Rutas
 
