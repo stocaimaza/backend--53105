@@ -9,7 +9,7 @@ const jwt = require("jsonwebtoken");
 const initializePassport = require("./config/passport.config.js");
 const passport = require("passport");
 const cookieParser = require("cookie-parser");
-const { passportCall } = require("./utils/util.js");
+const { passportCall, authorization } = require("./utils/util.js");
 
 
 
@@ -28,8 +28,14 @@ initializePassport();
 app.post("/login", (req, res) => {
     let { usuario, pass } = req.body;
     if (usuario === "tinki" && pass === "winki") {
-        let altoketoken = jwt.sign({ usuario, pass }, "coderhouse", { expiresIn: "24h" });
+        //let altoketoken = jwt.sign({ usuario, pass }, "coderhouse", { expiresIn: "24h" });
         //res.send({message:"Login exitoso", token});
+
+        //////////////////////////////////////////////////////////////////////
+        //Modificacion para utilizar el middleware "authorization":
+        let altoketoken = jwt.sign({ usuario, pass, role: "admin" }, "coderhouse", { expiresIn: "24h" });
+
+        //////////////////////////////////////////////////////////////////////
 
         //Enviar token desde Cookie: 
         res.cookie("coderCookieToken", altoketoken, { maxAge: 60 * 60 * 1000, httpOnly: true }).send({ message: "login exitoso" });
@@ -51,7 +57,7 @@ app.post("/login", (req, res) => {
 
 //Usando el passportCall: 
 
-app.get("/current", passportCall("jwt") ,passport.authenticate("jwt", { session: false }), (req, res) => {
+app.get("/current", passportCall("jwt") , authorization("admin"), (req, res) => {
     res.send(req.user);
 })
 
