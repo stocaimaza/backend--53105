@@ -1,0 +1,10 @@
+{"level":"warn","message":"Mensaje de Warning"}
+{"level":"error","message":"Mensaje de ERROR"}
+{"level":"warn","message":"Mensaje de Warning"}
+{"level":"error","message":"Mensaje de ERROR"}
+{"level":"warn","message":"Mensaje de Warning"}
+{"level":"error","message":"Mensaje de ERROR"}
+warning: Mensaje de Warning
+error: Mensaje de ERROR
+warning: Mensaje de Warning
+error: Mensaje de ERROR
