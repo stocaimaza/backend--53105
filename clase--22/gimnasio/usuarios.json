@@ -1,0 +1,62 @@
+[
+    {
+        "first_name": "Ana",
+        "last_name": "García",
+        "email": "ana.garcia@example.com",
+        "password": "password123"
+    },
+    {
+        "first_name": "Luis",
+        "last_name": "Martínez",
+        "email": "luis.martinez@example.com",
+        "password": "password456"
+    },
+    {
+        "first_name": "Carlos",
+        "last_name": "Lopez",
+        "email": "carlos.lopez@example.com",
+        "password": "password789"
+    },
+    {
+        "first_name": "Maria",
+        "last_name": "Pérez",
+        "email": "maria.perez@example.com",
+        "password": "password012"
+    },
+    {
+        "first_name": "Laura",
+        "last_name": "Hernández",
+        "email": "laura.hernandez@example.com",
+        "password": "password345"
+    },
+    {
+        "first_name": "Juan",
+        "last_name": "Gómez",
+        "email": "juan.gomez@example.com",
+        "password": "password678"
+    },
+    {
+        "first_name": "Sofia",
+        "last_name": "Jiménez",
+        "email": "sofia.jimenez@example.com",
+        "password": "password901"
+    },
+    {
+        "first_name": "Pedro",
+        "last_name": "Morales",
+        "email": "pedro.morales@example.com",
+        "password": "password234"
+    },
+    {
+        "first_name": "Valeria",
+        "last_name": "Cruz",
+        "email": "valeria.cruz@example.com",
+        "password": "password567"
+    },
+    {
+        "first_name": "Miguel",
+        "last_name": "Fernández",
+        "email": "miguel.fernandez@example.com",
+        "password": "password890"
+    }
+]
